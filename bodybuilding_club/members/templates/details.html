@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <h1> {{ member.firstname }} {{ member.lastname }}</h1>
+    <p>{{ member.description }}</p>
+    <img src="{% static '/members/images/members_photo/' %}{{member.img_url}}" >
+    
+{% endblock content %}
+    

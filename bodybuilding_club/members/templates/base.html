@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    </head>
+    <body>
+        <main class="container">
+            <header>
+                <nav>
+                    <ul>
+                        <li><strong>Bodybuilding Club</strong></li>
+                    </ul>
+                    <ul>
+                        <li><a href="{% url 'index' %}">Home</a></li>
+                        <li><a href="{% url 'rules' %}">Rules</a></li>
+                        <li><a href="{% url 'members' %}">Members</a></li>
+                    </ul>
+                </nav>
+
+            </header>
+            
+            {% block content %}
+                
+            {% endblock content %}
+    
+            <footer class="footer">
+                <small><p>&copy; 2023 bad oddman</p></small>
+            </footer>
+        </main>
+        
+    </body>
+</html>
