@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 
 {% block content %}
     <h1>Members</h1>
     <ul>
         {% for member in members%}
-        <li><a href="details/{{ member.id }}">{{ member.firstname }} {{member.lastname}}</a></li>
+        <li><a href="{{ member.id }}">{{ member.firstname }} {{member.lastname}}</a></li>
+        <a href="{{ member.id}}"><img class="profile_pic" src="{% static '/members/images/members_photo/' %}{{member.img_url}}"></a>
     {% endfor %}
     </ul>
 {% endblock content %}

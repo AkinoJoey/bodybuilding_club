@@ -7,5 +7,6 @@
     <p>{{ member.description }}</p>
     <img src="{% static '/members/images/members_photo/' %}{{member.img_url}}" >
     
+    <p>Back to <a href="{% url 'notables' %}">Members</a></p>
 {% endblock content %}
     
