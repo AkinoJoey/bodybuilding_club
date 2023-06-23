@@ -5,7 +5,15 @@
 
     <h1> {{ member.firstname }} {{ member.lastname }}</h1>
     <p>{{ member.description }}</p>
+    
     <img src="{% static '/members/images/members_photo/' %}{{member.img_url}}" >
+
+    <h2>Physical Status</h2>
+    <ul>
+    {% for element in member.status_list %}
+        <li>{{ element }}</li>
+    {% endfor %}
+    </ul>
     
     <p>Back to <a href="{% url 'notables' %}">Members</a></p>
 {% endblock content %}
